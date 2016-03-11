@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * "Yet Another Multicolumn Layout" - YAML CSS Framework
  *
@@ -8,75 +9,59 @@
  *                  YAML-CDL (http://www.yaml.de/license.html)
  * @link            http://www.yaml.de
  * @package         yaml
- * @version         4.1.2
+ * @version         ### version ###
  */
 @media screen {
   /* force vertical scrollbar */
   body {
-    overflow-y: scroll;
-  }
+    overflow-y: scroll; }
 
   /* Layout Module Configuration */
   .ym-wrapper {
     max-width: 80em;
-    margin: 0 auto;
-  }
+    margin: 0 auto; }
 
   .ym-wbox {
-    padding: 1.5em;
-  }
+    padding: 1.5em; }
 
   /* fallback for missing media queries support*/
   body > header, body > nav, body > main, body > footer {
-    min-width: 760px;
-  }
+    min-width: 760px; }
 
   /* Basic Element Styling */
   header {
     background: #444;
-    color: #ccc;
-  }
-  header h1 {
-    background: transparent;
-    color: #fff;
-  }
-  header .ym-wbox {
-    padding: 1.5em;
-  }
+    color: #ccc; }
+    header h1 {
+      background: transparent;
+      color: #fff; }
+    header .ym-wbox {
+      padding: 1.5em; }
 
   nav {
-    background: #222222;
-  }
+    background: #222222; }
 
   main .info {
-    margin-bottom: 1.5em;
-  }
+    margin-bottom: 1.5em; }
   main aside .ym-gbox-right {
-    border-left: 1px #ddd solid;
-  }
+    border-left: 1px #ddd solid; }
 
   footer {
     background: #eee;
-    color: #444;
-  }
-  footer p {
-    margin: 0;
-  }
-  footer .ym-wbox {
-    padding: 1.5em;
-  }
+    color: #444; }
+    footer p {
+      margin: 0; }
+    footer .ym-wbox {
+      padding: 1.5em; }
 
   .ym-gbox {
-    padding: 0 1.5em;
-  }
+    padding: 0 1.5em; }
 
   .ym-gbox-left {
-    padding: 0 1.5em 0 0;
-  }
+    padding: 0 1.5em 0 0; }
 
   .ym-gbox-right {
-    padding: 0 0 0 1.5em;
-  }
+    padding: 0 0 0 1.5em; }
 
   /* skip links styling */
   .ym-skiplinks a.ym-skip:focus,
@@ -86,15 +71,11 @@
     border-bottom: 1px #000 solid;
     padding: 10px 0;
     text-align: center;
-    text-decoration: none;
-  }
-}
+    text-decoration: none; } }
 /* reset fallback values in modern browsers */
 @media screen and (min-width: 0px) {
   body > header, body > nav, body > main, body > footer {
-    min-width: 0;
-  }
-}
+    min-width: 0; } }
 @media screen and (max-width: 760px) {
   /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-1 */
   .linearize-level-1, .linearize-level-1 > [class*="ym-c"], .linearize-level-1 > [class*="ym-g"] {
@@ -103,37 +84,30 @@
     float: none;
     padding: 0;
     margin: 0;
-    width: auto !important;
-  }
+    width: auto !important; }
   .linearize-level-1 > [class*="ym-c"] > [class*="ym-cbox"], .linearize-level-1 > [class*="ym-g"] > [class*="ym-gbox"] {
     /* reset defined gutter values */
     margin: 0;
     padding: 0;
     /* optional for containing floats */
-    overflow: hidden;
-  }
+    overflow: hidden; }
 
   .secondary {
     border-top: 1px #888 solid;
     margin-top: 1.5em !important;
-    padding-top: 1.5em !important;
-  }
+    padding-top: 1.5em !important; }
 
   main aside .ym-gbox-right {
-    border: 0 none;
-  }
+    border: 0 none; }
 
   .ym-searchform {
     display: block;
     float: none;
     width: auto;
-    text-align: right;
-  }
+    text-align: right; }
 
   .ym-searchform input[type="search"] {
-    width: 14%;
-  }
-}
+    width: 14%; } }
 @media screen and (max-width: 480px) {
   /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-2 */
   .linearize-level-2, .linearize-level-2 > [class*="ym-c"], .linearize-level-2 > [class*="ym-g"] {
@@ -142,32 +116,27 @@
     float: none;
     padding: 0;
     margin: 0;
-    width: auto !important;
-  }
+    width: auto !important; }
   .linearize-level-2 > [class*="ym-c"] > [class*="ym-cbox"], .linearize-level-2 > [class*="ym-g"] > [class*="ym-gbox"] {
     /* reset defined gutter values */
     margin: 0;
     padding: 0;
     /* optional for containing floats */
-    overflow: hidden;
-  }
+    overflow: hidden; }
 
   header .ym-wbox {
-    padding: 0.75em 10px;
-  }
+    padding: 0.75em 10px; }
   header h1 {
     font-size: 1.5em;
     line-height: 1em;
-    margin: 0;
-  }
+    margin: 0; }
 
   footer .ym-wbox,
   .ym-wbox,
   .ym-searchform,
   nav .ym-hlist ul {
     padding-left: 10px;
-    padding-right: 10px;
-  }
+    padding-right: 10px; }
 
   .ym-searchform,
   nav .ym-hlist ul,
@@ -175,10 +144,9 @@
     display: block;
     float: none;
     width: auto;
-    text-align: left;
-  }
+    text-align: left; }
 
   .ym-searchform input[type="search"] {
-    width: 75%;
-  }
-}
+    width: 75%; } }
+
+/*# sourceMappingURL=screen-FULLPAGE-layout.css.map */

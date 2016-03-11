@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * "Yet Another Multicolumn Layout" - YAML CSS Framework
  *
@@ -11,7 +12,7 @@
  *                  YAML-CDL (http://www.yaml.de/license.html)
  * @link            http://www.yaml.de
  * @package         yaml
- * @version         4.1.2
+ * @version         ### version ###
  * @appdef yaml
  */
 @media all {
@@ -42,8 +43,7 @@
   * @valid     no
   */
   body {
-    o\verflow: visible;
-  }
+    o\verflow: visible; }
 
   /**
   * (en) HTML5 - default media element styles
@@ -51,15 +51,13 @@
   */
   article, aside, details, figcaption, figure,
   footer, header, main, nav, section {
-    zoom: 1;
-  }
+    zoom: 1; }
 
   audio,
   canvas,
   video {
     *display: inline;
-    *zoom: 1;
-  }
+    *zoom: 1; }
 
   /**
   * (en) enable bicubic interpolation of images on scaling
@@ -67,8 +65,7 @@
   */
   img {
     -ms-interpolation-mode: bicubic;
-    zoom: 1;
-  }
+    zoom: 1; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -82,18 +79,15 @@
   */
   * html iframe,
   * html frame {
-    overflow: auto;
-  }
+    overflow: auto; }
 
   * html input,
   * html frameset {
-    overflow: hidden;
-  }
+    overflow: hidden; }
 
   * html textarea {
     overflow: scroll;
-    overflow-x: hidden;
-  }
+    overflow-x: hidden; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -109,12 +103,10 @@
   * @valid		 yes
   */
   body, #main {
-    position: relative;
-  }
+    position: relative; }
 
   * html body {
-    position: static;
-  }
+    position: static; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -128,8 +120,7 @@
   * @valid     yes
   */
   .ym-clearfix {
-    zoom: 1;
-  }
+    zoom: 1; }
 
   /* hasLayout aktivieren */
   /*------------------------------------------------------------------------------------------------------*/
@@ -145,8 +136,7 @@
   * html .ym-col1,
   * html .ym-col2,
   * html .ym-col3 {
-    position: relative;
-  }
+    position: relative; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -159,30 +149,25 @@
   * @valid     no
   */
   body {
-    height: 1%;
-  }
+    height: 1%; }
 
   .ym-wrapper, .ym-wbox, #header, #nav, #main, #footer {
-    zoom: 1;
-  }
+    zoom: 1; }
 
   /* IE6 & IE7	*/
   * html .ym-wrapper, * html .ym-wbox {
     height: 1%;
-    hei\ght: auto;
-  }
+    hei\ght: auto; }
 
   /* IE 5.x & IE6 | IE6 only */
   * html #header, * html #nav, * html #main, * html #footer {
     width: 100%;
-    wid\th: auto;
-  }
+    wid\th: auto; }
 
   /* IE 5.x & IE6 | IE6 only */
   /* trigger hasLayout to force containing content */
   .ym-gbox, .ym-gbox-left, .ym-gbox-right {
-    height: 1%;
-  }
+    height: 1%; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -195,8 +180,7 @@
   * @valid     yes
   */
   * html ul, * html ol, * html dl {
-    position: relative;
-  }
+    position: relative; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -208,8 +192,7 @@
   * @valid     yes
   */
   body ol li {
-    display: list-item;
-  }
+    display: list-item; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -221,8 +204,7 @@
   * @valid     yes
   */
   * html .flexible {
-    zoom: 1;
-  }
+    zoom: 1; }
 
   /**
   * Form related bugfixes
@@ -233,16 +215,13 @@
   * @valid     no
   */
   button, input {
-    *overflow: visible !important;
-  }
+    *overflow: visible !important; }
 
   table button, table input {
-    *overflow: auto;
-  }
+    *overflow: auto; }
 
   fieldset, legend {
-    position: relative;
-  }
+    position: relative; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -256,38 +235,32 @@
   .ym-form,
   .ym-form div,
   .ym-form div * {
-    zoom: 1;
-  }
+    zoom: 1; }
 
   .ym-form input,
   .ym-form textarea {
     width: 68%;
     padding-left: 1% !important;
-    padding-right: 1% !important;
-  }
+    padding-right: 1% !important; }
   .ym-form select {
     width: 70%;
     padding-left: 1% !important;
-    padding-right: 1% !important;
-  }
+    padding-right: 1% !important; }
   .ym-form .ym-fbox-wrap {
     display: block;
     overflow: hidden;
-    margin-right: -5px;
-  }
+    margin-right: -5px; }
 
   .ym-fbox-wrap input,
   .ym-fbox-wrap textarea,
   .ym-full input,
   .ym-full textarea {
     width: 98%;
-    margin-right: -3px;
-  }
+    margin-right: -3px; }
   .ym-fbox-wrap select,
   .ym-full select {
     width: 100%;
-    margin-right: -3px;
-  }
+    margin-right: -3px; }
 
   /* ie6 support helper class */
   * html .ym-form .ym-fbox-check input {
@@ -295,11 +268,9 @@
     width: auto !important;
     background: transparent !important;
     border: 0 none !important;
-    padding: 0 !important;
-  }
+    padding: 0 !important; }
   * html .ym-form .ym-fbox-wrap .ym-fbox-check input {
-    margin-left: 0;
-  }
+    margin-left: 0; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -333,32 +304,26 @@
     width: 100%;
     line-height: 0;
     font-size: 0px;
-    margin: -2px 0 -1em 1px;
-  }
+    margin: -2px 0 -1em 1px; }
 
   * html .ym-ie-clearing {
-    margin: -2px 0 -1em 0;
-  }
+    margin: -2px 0 -1em 0; }
 
   .ym-cbox {
-    margin-bottom: -2px;
-  }
+    margin-bottom: -2px; }
 
   /* (en) avoid horizontal scrollbars in IE7 in borderless layouts because of negative margins */
   /* (de) Vermeidung horizontaler Scrollbalken bei randabfallenden Layouts im IE7 */
   html {
-    margin-right: 1px;
-  }
+    margin-right: 1px; }
 
   * html {
-    margin-right: 0;
-  }
+    margin-right: 0; }
 
   /* (en) Bugfix:Essential for IE7 */
   /* (de) Bugfix:Notwendig im IE7 */
   .ym-col3 {
-    position: relative;
-  }
+    position: relative; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -369,8 +334,7 @@
   * @affected  IE 5.x/Win, IE6
   * @css-for   IE 5.x/Win, IE6
   * @valid     yes
-  */
-}
+  */ }
 @media screen, projection {
   /**
   * (en) IE-Adjustments for content columns and subtemplates
@@ -385,45 +349,38 @@
   * @valid     yes
   */
   .ym-col1, .ym-col2 {
-    display: inline;
-  }
+    display: inline; }
 
   /* Fix for:"Linking to anchors in elements within the containing block" Problem in IE5.x & IE 6.0 */
   .ym-grid {
     overflow: hidden;
-    display: block;
-  }
+    display: block; }
 
   * html .ym-grid {
-    overflow: visible;
-  }
+    overflow: visible; }
 
   .ym-gl,
   .ym-gr {
-    display: inline;
-  }
+    display: inline; }
 
   /* transform CSS tables back into floats */
   .ym-equalize .ym-gl {
     float: left;
     display: inline;
     padding-bottom: 32767px;
-    margin-bottom: -32767px;
-  }
+    margin-bottom: -32767px; }
 
   .ym-equalize .ym-gr {
     float: right;
     margin-left: -5px;
     display: inline;
     padding-bottom: 32767px;
-    margin-bottom: -32767px;
-  }
+    margin-bottom: -32767px; }
 
   .no-ie-padding .ym-gl,
   .no-ie-padding .ym-gr {
     padding-bottom: 0;
-    margin-bottom: 0;
-  }
+    margin-bottom: 0; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /**
@@ -438,17 +395,14 @@
   * html .ym-cbox-left,
   * html .ym-cbox-right,
   * html .ym-cbox {
-    word-wrap: break-word;
-  }
+    word-wrap: break-word; }
 
   /* avoid growing widths */
   * html .ym-gbox,
   * html .ym-gbox-left,
   * html .ym-gbox-right {
     word-wrap: break-word;
-    o\verflow: hidden;
-  }
-}
+    o\verflow: hidden; } }
 @media print {
   /**
   * (en) Avoid unneeded page breaks of .ym-col3 content in print layout and containing floats.
@@ -463,6 +417,6 @@
   .ym-gbox-left,
   .ym-gbox-right,
   .ym-col3 {
-    height: 1%;
-  }
-}
+    height: 1%; } }
+
+/*# sourceMappingURL=iehacks.css.map */

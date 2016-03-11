@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * "Yet Another Multicolumn Layout" - YAML CSS Framework
  *
@@ -8,7 +9,7 @@
  *                  YAML-CDL (http://www.yaml.de/license.html)
  * @link            http://www.yaml.de
  * @package         yaml
- * @version         4.1.2
+ * @version         ### version ###
  */
 @media print {
   /**
@@ -18,15 +19,13 @@
   /* (de) Wechsel der der Schriftgrößen-Maßheinheit zu [pt] - Probleme mit [px] in Gecko-Browsern vermeiden */
   body {
     font-size: 10pt;
-    padding: 0 5px;
-  }
+    padding: 0 5px; }
 
   /* (en) Hide unneeded container of the screenlayout in print layout */
   /* (de) Für den Druck nicht benötigte Container des Layouts abschalten */
   nav,
   .ym-searchform {
-    display: none;
-  }
+    display: none; }
 
   /*------------------------------------------------------------------------------------------------------*/
   /* (en) Avoid page breaks right after headings */
@@ -37,6 +36,6 @@
   h4,
   h5,
   h6 {
-    page-break-after: avoid;
-  }
-}
+    page-break-after: avoid; } }
+
+/*# sourceMappingURL=print.css.map */

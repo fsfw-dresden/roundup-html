@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * "Yet Another Multicolumn Layout" - YAML CSS Framework
  * YAML form theme: "gray-theme"
@@ -7,77 +8,62 @@
  *                  YAML-CDL (http://www.yaml.de/license.html)
  * @link            http://www.yaml.de
  * @package         yaml
- * @version         4.1.2
+ * @version         ### version ###
  */
 @media screen {
   .ym-form {
     background: #f4f4f4;
     border: 2px #fff solid;
     margin: 0 0 1.5em 0;
-    -webkit-box-shadow: 0 0 4px #dddddd;
-    box-shadow: 0 0 4px #dddddd;
-  }
-  .ym-form fieldset {
-    position: static;
-    background: transparent;
-    margin: 0.75em 0 0.75em 0;
-    padding: 0 0.5em;
-  }
-  .ym-form legend {
-    background: transparent;
-    color: #000;
-    font-size: 1.2em;
-    line-height: 1.25em;
-    font-weight: bold;
-    padding: 0 0.5em;
-  }
-  .ym-form label,
-  .ym-form .ym-label {
-    color: #666;
-    line-height: 1.5;
-    padding-top: 0.25em;
-  }
-  .ym-form .ym-fbox {
-    padding: 0 1em;
-    margin: 1em 0 0.5em 0;
-  }
-  .ym-form .ym-fbox-footer {
-    background: #ececec;
-    border-top: 1px #e0e0e0 solid;
-    padding: 1.5em 1em;
-    margin: 0;
-  }
-  .ym-form .ym-fbox + .ym-fbox {
-    margin: 0.5em 0;
-  }
-  .ym-form .ym-fbox:last-child {
-    margin-bottom: 1em;
-  }
-  .ym-form .ym-fbox + .ym-fbox-footer {
-    margin: 1em 0 0 0;
-  }
-  .ym-form .ym-fbox :last-child,
-  .ym-form .ym-fbox-footer :last-child {
-    margin-bottom: 0;
-  }
-  .ym-form .ym-fbox-heading {
-    font-size: 1em;
-    font-size: 100%;
-    color: #000;
-    margin: 1em;
-  }
-  .ym-form .ym-fbox-check:focus + label {
-    color: #000;
-  }
-  .ym-form .ym-gbox-left {
-    padding: 0 4px 0 0;
-  }
-  .ym-form .ym-gbox-right {
-    padding: 0 0 0 4px;
-  }
-  .ym-form .ym-gbox {
-    padding: 0 2px 0 2px;
-  }
+    -webkit-box-shadow: 0 0 4px #ddd;
+    box-shadow: 0 0 4px #ddd; }
+    .ym-form fieldset {
+      position: static;
+      background: transparent;
+      margin: 0.75em 0 0.75em 0;
+      padding: 0 0.5em; }
+    .ym-form legend {
+      background: transparent;
+      color: #000;
+      font-size: 1.2em;
+      line-height: 1.25em;
+      font-weight: bold;
+      padding: 0 0.5em; }
+    .ym-form label,
+    .ym-form .ym-label {
+      color: #666;
+      line-height: 1.5;
+      padding-top: 0.25em; }
+    .ym-form .ym-fbox {
+      padding: 0 1em;
+      margin: 1em 0 0.5em 0; }
+    .ym-form .ym-fbox-footer {
+      background: #ececec;
+      border-top: 1px #e0e0e0 solid;
+      padding: 1.5em 1em;
+      margin: 0; }
+    .ym-form .ym-fbox + .ym-fbox {
+      margin: 0.5em 0; }
+    .ym-form .ym-fbox:last-child {
+      margin-bottom: 1em; }
+    .ym-form .ym-fbox + .ym-fbox-footer {
+      margin: 1em 0 0 0; }
+    .ym-form .ym-fbox :last-child,
+    .ym-form .ym-fbox-footer :last-child {
+      margin-bottom: 0; }
+    .ym-form .ym-fbox-heading {
+      font-size: 1em;
+      font-size: 100%;
+      color: #000;
+      margin: 1em; }
+    .ym-form .ym-fbox-check:focus + label {
+      color: #000; }
+    .ym-form .ym-gbox-left {
+      padding: 0 4px 0 0; }
+    .ym-form .ym-gbox-right {
+      padding: 0 0 0 4px; }
+    .ym-form .ym-gbox {
+      padding: 0 2px 0 2px; }
 
   /**
   * @section styling form elements
@@ -89,16 +75,13 @@
     border: 1px solid #ddd;
     line-height: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    -webkit-box-shadow: inset 0 0 4px #eeeeee;
-    box-shadow: inset 0 0 4px #eeeeee;
-  }
+    -webkit-box-shadow: inset 0 0 4px #eee;
+    box-shadow: inset 0 0 4px #eee; }
   .ym-form input,
   .ym-form textarea {
-    padding: 4px 0.3em;
-  }
+    padding: 4px 0.3em; }
   .ym-form select {
-    padding: 3px 2px 3px 1px;
-  }
+    padding: 3px 2px 3px 1px; }
   .ym-form input:focus,
   .ym-form select:focus,
   .ym-form textarea:focus,
@@ -109,58 +92,47 @@
   .ym-form select:active,
   .ym-form textarea:active {
     border: 1px #888 solid;
-    background: #fff;
-  }
+    background: #fff; }
   .ym-form optgroup {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-weight: bold;
-  }
+    font-weight: bold; }
   .ym-form .ym-fbox-check input,
   .ym-form input[type="image"],
   .ym-form input[type="radio"],
   .ym-form input[type="checkbox"] {
     border: 0 none !important;
-    background: transparent !important;
-  }
+    background: transparent !important; }
   .ym-form .ym-message {
     color: #666;
-    margin-bottom: 0.5em;
-  }
+    margin-bottom: 0.5em; }
   .ym-form .ym-required {
     color: #800;
-    font-weight: bold;
-  }
+    font-weight: bold; }
   .ym-form input:valid,
   .ym-form textarea:valid {
-    background-color: #fff;
-  }
+    background-color: #fff; }
   .ym-form input:invalid,
   .ym-form textarea:invalid {
-    background-color: #fdd;
-  }
+    background-color: #fdd; }
   .ym-form .ym-error label {
     color: #800;
-    font-weight: normal;
-  }
+    font-weight: normal; }
   .ym-form .ym-error input,
   .ym-form .ym-error select,
   .ym-form .ym-error textarea {
-    border: 1px #800 solid;
-  }
+    border: 1px #800 solid; }
   .ym-form .ym-error input:hover,
   .ym-form .ym-error input:focus,
   .ym-form .ym-error select:hover,
   .ym-form .ym-error select:focus,
   .ym-form .ym-error textarea:hover,
   .ym-form .ym-error textarea:focus {
-    border: 1px #800 solid !important;
-  }
+    border: 1px #800 solid !important; }
   .ym-form .ym-error .ym-message {
     color: #800;
     font-weight: bold;
-    margin-top: 0;
-  }
+    margin-top: 0; }
 
   /**
   * @section Buttons
@@ -173,12 +145,12 @@
   .ym-form input[type="submit"] {
     display: inline-block;
     white-space: nowrap;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
-    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: linear-gradient(to bottom, #eeeeee,#cccccc);
-    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eee), color-stop(100%, #ccc));
+    background-image: -webkit-linear-gradient(top, #eee, #ccc);
+    background-image: -moz-linear-gradient(top, #eee, #ccc);
+    background-image: -ms-linear-gradient(top, #eee, #ccc);
+    background-image: linear-gradient(to bottom, #eee,#ccc);
+    background-color: #eee;
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC');
     zoom: 1;
     border: 1px solid #777;
@@ -193,68 +165,59 @@
     overflow: visible;
     /* removes extra side spacing in IE */
     text-decoration: none !important;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  }
-  .ym-button:hover,
-  .ym-form button:hover,
-  .ym-form input[type="button"]:hover,
-  .ym-form input[type="reset"]:hover,
-  .ym-form input[type="submit"]:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #dddddd));
-    background-image: -webkit-linear-gradient(top, #fafafa, #dddddd);
-    background-image: -moz-linear-gradient(top, #fafafa, #dddddd);
-    background-image: -ms-linear-gradient(top, #fafafa, #dddddd);
-    background-image: linear-gradient(to bottom, #fafafa,#dddddd);
-    background-color: #fafafa;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFFAFAFA', endColorstr='#FFDDDDDD');
-    zoom: 1;
-  }
-  .ym-button:active,
-  .ym-form button:active,
-  .ym-form input[type="button"]:active,
-  .ym-form input[type="reset"]:active,
-  .ym-form input[type="submit"]:active {
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, #bbbbbb));
-    background-image: -webkit-linear-gradient(top, #cccccc, #bbbbbb);
-    background-image: -moz-linear-gradient(top, #cccccc, #bbbbbb);
-    background-image: -ms-linear-gradient(top, #cccccc, #bbbbbb);
-    background-image: linear-gradient(to bottom, #cccccc,#bbbbbb);
-    background-color: #cccccc;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFCCCCCC', endColorstr='#FFBBBBBB');
-    zoom: 1;
-    position: relative;
-    top: 1px;
-  }
-  .ym-button:focus,
-  .ym-form button:focus,
-  .ym-form input[type="button"]:focus,
-  .ym-form input[type="reset"]:focus,
-  .ym-form input[type="submit"]:focus {
-    outline: 0;
-    background: #fafafa;
-  }
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+    .ym-button:hover,
+    .ym-form button:hover,
+    .ym-form input[type="button"]:hover,
+    .ym-form input[type="reset"]:hover,
+    .ym-form input[type="submit"]:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #ddd));
+      background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+      background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+      background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+      background-image: linear-gradient(to bottom, #fafafa,#ddd);
+      background-color: #fafafa;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFFAFAFA', endColorstr='#FFDDDDDD');
+      zoom: 1; }
+    .ym-button:active,
+    .ym-form button:active,
+    .ym-form input[type="button"]:active,
+    .ym-form input[type="reset"]:active,
+    .ym-form input[type="submit"]:active {
+      -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccc), color-stop(100%, #bbb));
+      background-image: -webkit-linear-gradient(top, #ccc, #bbb);
+      background-image: -moz-linear-gradient(top, #ccc, #bbb);
+      background-image: -ms-linear-gradient(top, #ccc, #bbb);
+      background-image: linear-gradient(to bottom, #ccc,#bbb);
+      background-color: #ccc;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFCCCCCC', endColorstr='#FFBBBBBB');
+      zoom: 1;
+      position: relative;
+      top: 1px; }
+    .ym-button:focus,
+    .ym-form button:focus,
+    .ym-form input[type="button"]:focus,
+    .ym-form input[type="reset"]:focus,
+    .ym-form input[type="submit"]:focus {
+      outline: 0;
+      background: #fafafa; }
 
   /* Button size-scaling classes */
   .ym-button {
     /* 21px */
     /* 18px */
     /* 12px */
-    /* 10px */
-  }
-  .ym-button.ym-xlarge {
-    font-size: 1.5em;
-  }
-  .ym-button.ym-large {
-    font-size: 1.2857em;
-  }
-  .ym-button.ym-small {
-    font-size: 0.8571em;
-  }
-  .ym-button.ym-xsmall {
-    font-size: 0.7143em;
-  }
+    /* 10px */ }
+    .ym-button.ym-xlarge {
+      font-size: 1.5em; }
+    .ym-button.ym-large {
+      font-size: 1.2857em; }
+    .ym-button.ym-small {
+      font-size: 0.8571em; }
+    .ym-button.ym-xsmall {
+      font-size: 0.7143em; }
 
   /* Button color scheme: primary */
   .ym-button.ym-primary,
@@ -264,56 +227,52 @@
   .ym-form input[type="submit"].ym-primary {
     -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8888ee), color-stop(100%, #6666cc));
-    background-image: -webkit-linear-gradient(top, #8888ee, #6666cc);
-    background-image: -moz-linear-gradient(top, #8888ee, #6666cc);
-    background-image: -ms-linear-gradient(top, #8888ee, #6666cc);
-    background-image: linear-gradient(to bottom, #8888ee,#6666cc);
-    background-color: #8888ee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #88e), color-stop(100%, #66c));
+    background-image: -webkit-linear-gradient(top, #88e, #66c);
+    background-image: -moz-linear-gradient(top, #88e, #66c);
+    background-image: -ms-linear-gradient(top, #88e, #66c);
+    background-image: linear-gradient(to bottom, #88e,#66c);
+    background-color: #88e;
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF8888EE', endColorstr='#FF6666CC');
     zoom: 1;
     border: 1px solid #007;
     color: #fff !important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-  }
-  .ym-button.ym-primary:hover,
-  .ym-form button.ym-primary:hover,
-  .ym-form input[type="button"].ym-primary:hover,
-  .ym-form input[type="reset"].ym-primary:hover,
-  .ym-form input[type="submit"].ym-primary:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8888ff), color-stop(100%, #6666dd));
-    background-image: -webkit-linear-gradient(top, #8888ff, #6666dd);
-    background-image: -moz-linear-gradient(top, #8888ff, #6666dd);
-    background-image: -ms-linear-gradient(top, #8888ff, #6666dd);
-    background-image: linear-gradient(to bottom, #8888ff,#6666dd);
-    background-color: #8888ff;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF8888FF', endColorstr='#FF6666DD');
-    zoom: 1;
-  }
-  .ym-button.ym-primary:active,
-  .ym-form button.ym-primary:active,
-  .ym-form input[type="button"].ym-primary:active,
-  .ym-form input[type="reset"].ym-primary:active,
-  .ym-form input[type="submit"].ym-primary:active {
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8888cc), color-stop(100%, #6666aa));
-    background-image: -webkit-linear-gradient(top, #8888cc, #6666aa);
-    background-image: -moz-linear-gradient(top, #8888cc, #6666aa);
-    background-image: -ms-linear-gradient(top, #8888cc, #6666aa);
-    background-image: linear-gradient(to bottom, #8888cc,#6666aa);
-    background-color: #8888cc;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF8888CC', endColorstr='#FF6666AA');
-    zoom: 1;
-  }
-  .ym-button.ym-primary:focus,
-  .ym-form button.ym-primary:focus,
-  .ym-form input[type="button"].ym-primary:focus,
-  .ym-form input[type="reset"].ym-primary:focus,
-  .ym-form input[type="submit"].ym-primary:focus {
-    outline: 0;
-    background: #88f;
-  }
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+    .ym-button.ym-primary:hover,
+    .ym-form button.ym-primary:hover,
+    .ym-form input[type="button"].ym-primary:hover,
+    .ym-form input[type="reset"].ym-primary:hover,
+    .ym-form input[type="submit"].ym-primary:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #88f), color-stop(100%, #66d));
+      background-image: -webkit-linear-gradient(top, #88f, #66d);
+      background-image: -moz-linear-gradient(top, #88f, #66d);
+      background-image: -ms-linear-gradient(top, #88f, #66d);
+      background-image: linear-gradient(to bottom, #88f,#66d);
+      background-color: #88f;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF8888FF', endColorstr='#FF6666DD');
+      zoom: 1; }
+    .ym-button.ym-primary:active,
+    .ym-form button.ym-primary:active,
+    .ym-form input[type="button"].ym-primary:active,
+    .ym-form input[type="reset"].ym-primary:active,
+    .ym-form input[type="submit"].ym-primary:active {
+      -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #88c), color-stop(100%, #66a));
+      background-image: -webkit-linear-gradient(top, #88c, #66a);
+      background-image: -moz-linear-gradient(top, #88c, #66a);
+      background-image: -ms-linear-gradient(top, #88c, #66a);
+      background-image: linear-gradient(to bottom, #88c,#66a);
+      background-color: #88c;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF8888CC', endColorstr='#FF6666AA');
+      zoom: 1; }
+    .ym-button.ym-primary:focus,
+    .ym-form button.ym-primary:focus,
+    .ym-form input[type="button"].ym-primary:focus,
+    .ym-form input[type="reset"].ym-primary:focus,
+    .ym-form input[type="submit"].ym-primary:focus {
+      outline: 0;
+      background: #88f; }
 
   /* Button color scheme: success */
   .ym-button.ym-success,
@@ -323,56 +282,52 @@
   .ym-form input[type="submit"].ym-success {
     -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66bb66), color-stop(100%, #449944));
-    background-image: -webkit-linear-gradient(top, #66bb66, #449944);
-    background-image: -moz-linear-gradient(top, #66bb66, #449944);
-    background-image: -ms-linear-gradient(top, #66bb66, #449944);
-    background-image: linear-gradient(to bottom, #66bb66,#449944);
-    background-color: #66bb66;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6b6), color-stop(100%, #494));
+    background-image: -webkit-linear-gradient(top, #6b6, #494);
+    background-image: -moz-linear-gradient(top, #6b6, #494);
+    background-image: -ms-linear-gradient(top, #6b6, #494);
+    background-image: linear-gradient(to bottom, #6b6,#494);
+    background-color: #6b6;
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF66BB66', endColorstr='#FF449944');
     zoom: 1;
     border: 1px solid #070;
     color: #fff !important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-  }
-  .ym-button.ym-success:hover,
-  .ym-form button.ym-success:hover,
-  .ym-form input[type="button"].ym-success:hover,
-  .ym-form input[type="reset"].ym-success:hover,
-  .ym-form input[type="submit"].ym-success:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66cc66), color-stop(100%, #55aa55));
-    background-image: -webkit-linear-gradient(top, #66cc66, #55aa55);
-    background-image: -moz-linear-gradient(top, #66cc66, #55aa55);
-    background-image: -ms-linear-gradient(top, #66cc66, #55aa55);
-    background-image: linear-gradient(to bottom, #66cc66,#55aa55);
-    background-color: #66cc66;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF66CC66', endColorstr='#FF55AA55');
-    zoom: 1;
-  }
-  .ym-button.ym-success:active,
-  .ym-form button.ym-success:active,
-  .ym-form input[type="button"].ym-success:active,
-  .ym-form input[type="reset"].ym-success:active,
-  .ym-form input[type="submit"].ym-success:active {
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66aa66), color-stop(100%, #448844));
-    background-image: -webkit-linear-gradient(top, #66aa66, #448844);
-    background-image: -moz-linear-gradient(top, #66aa66, #448844);
-    background-image: -ms-linear-gradient(top, #66aa66, #448844);
-    background-image: linear-gradient(to bottom, #66aa66,#448844);
-    background-color: #66aa66;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF66AA66', endColorstr='#FF448844');
-    zoom: 1;
-  }
-  .ym-button.ym-success:focus,
-  .ym-form button.ym-success:focus,
-  .ym-form input[type="button"].ym-success:focus,
-  .ym-form input[type="reset"].ym-success:focus,
-  .ym-form input[type="submit"].ym-success:focus {
-    outline: 0;
-    background: #6c6;
-  }
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+    .ym-button.ym-success:hover,
+    .ym-form button.ym-success:hover,
+    .ym-form input[type="button"].ym-success:hover,
+    .ym-form input[type="reset"].ym-success:hover,
+    .ym-form input[type="submit"].ym-success:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6c6), color-stop(100%, #5a5));
+      background-image: -webkit-linear-gradient(top, #6c6, #5a5);
+      background-image: -moz-linear-gradient(top, #6c6, #5a5);
+      background-image: -ms-linear-gradient(top, #6c6, #5a5);
+      background-image: linear-gradient(to bottom, #6c6,#5a5);
+      background-color: #6c6;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF66CC66', endColorstr='#FF55AA55');
+      zoom: 1; }
+    .ym-button.ym-success:active,
+    .ym-form button.ym-success:active,
+    .ym-form input[type="button"].ym-success:active,
+    .ym-form input[type="reset"].ym-success:active,
+    .ym-form input[type="submit"].ym-success:active {
+      -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6a6), color-stop(100%, #484));
+      background-image: -webkit-linear-gradient(top, #6a6, #484);
+      background-image: -moz-linear-gradient(top, #6a6, #484);
+      background-image: -ms-linear-gradient(top, #6a6, #484);
+      background-image: linear-gradient(to bottom, #6a6,#484);
+      background-color: #6a6;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FF66AA66', endColorstr='#FF448844');
+      zoom: 1; }
+    .ym-button.ym-success:focus,
+    .ym-form button.ym-success:focus,
+    .ym-form input[type="button"].ym-success:focus,
+    .ym-form input[type="reset"].ym-success:focus,
+    .ym-form input[type="submit"].ym-success:focus {
+      outline: 0;
+      background: #6c6; }
 
   /* Button color scheme: warning */
   .ym-button.ym-warning,
@@ -382,56 +337,52 @@
   .ym-form input[type="submit"].ym-warning {
     -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ddaa44), color-stop(100%, #bb7722));
-    background-image: -webkit-linear-gradient(top, #ddaa44, #bb7722);
-    background-image: -moz-linear-gradient(top, #ddaa44, #bb7722);
-    background-image: -ms-linear-gradient(top, #ddaa44, #bb7722);
-    background-image: linear-gradient(to bottom, #ddaa44,#bb7722);
-    background-color: #ddaa44;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #da4), color-stop(100%, #b72));
+    background-image: -webkit-linear-gradient(top, #da4, #b72);
+    background-image: -moz-linear-gradient(top, #da4, #b72);
+    background-image: -ms-linear-gradient(top, #da4, #b72);
+    background-image: linear-gradient(to bottom, #da4,#b72);
+    background-color: #da4;
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFDDAA44', endColorstr='#FFBB7722');
     zoom: 1;
     border: 1px solid #970;
     color: #fff !important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-  }
-  .ym-button.ym-warning:hover,
-  .ym-form button.ym-warning:hover,
-  .ym-form input[type="button"].ym-warning:hover,
-  .ym-form input[type="reset"].ym-warning:hover,
-  .ym-form input[type="submit"].ym-warning:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eebb55), color-stop(100%, #cc8833));
-    background-image: -webkit-linear-gradient(top, #eebb55, #cc8833);
-    background-image: -moz-linear-gradient(top, #eebb55, #cc8833);
-    background-image: -ms-linear-gradient(top, #eebb55, #cc8833);
-    background-image: linear-gradient(to bottom, #eebb55,#cc8833);
-    background-color: #eebb55;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFEEBB55', endColorstr='#FFCC8833');
-    zoom: 1;
-  }
-  .ym-button.ym-warning:active,
-  .ym-form button.ym-warning:active,
-  .ym-form input[type="button"].ym-warning:active,
-  .ym-form input[type="reset"].ym-warning:active,
-  .ym-form input[type="submit"].ym-warning:active {
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc9944), color-stop(100%, #aa6622));
-    background-image: -webkit-linear-gradient(top, #cc9944, #aa6622);
-    background-image: -moz-linear-gradient(top, #cc9944, #aa6622);
-    background-image: -ms-linear-gradient(top, #cc9944, #aa6622);
-    background-image: linear-gradient(to bottom, #cc9944,#aa6622);
-    background-color: #cc9944;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFCC9944', endColorstr='#FFAA6622');
-    zoom: 1;
-  }
-  .ym-button.ym-warning:focus,
-  .ym-form button.ym-warning:focus,
-  .ym-form input[type="button"].ym-warning:focus,
-  .ym-form input[type="reset"].ym-warning:focus,
-  .ym-form input[type="submit"].ym-warning:focus {
-    outline: 0;
-    background: #da4;
-  }
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+    .ym-button.ym-warning:hover,
+    .ym-form button.ym-warning:hover,
+    .ym-form input[type="button"].ym-warning:hover,
+    .ym-form input[type="reset"].ym-warning:hover,
+    .ym-form input[type="submit"].ym-warning:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eb5), color-stop(100%, #c83));
+      background-image: -webkit-linear-gradient(top, #eb5, #c83);
+      background-image: -moz-linear-gradient(top, #eb5, #c83);
+      background-image: -ms-linear-gradient(top, #eb5, #c83);
+      background-image: linear-gradient(to bottom, #eb5,#c83);
+      background-color: #eb5;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFEEBB55', endColorstr='#FFCC8833');
+      zoom: 1; }
+    .ym-button.ym-warning:active,
+    .ym-form button.ym-warning:active,
+    .ym-form input[type="button"].ym-warning:active,
+    .ym-form input[type="reset"].ym-warning:active,
+    .ym-form input[type="submit"].ym-warning:active {
+      -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c94), color-stop(100%, #a62));
+      background-image: -webkit-linear-gradient(top, #c94, #a62);
+      background-image: -moz-linear-gradient(top, #c94, #a62);
+      background-image: -ms-linear-gradient(top, #c94, #a62);
+      background-image: linear-gradient(to bottom, #c94,#a62);
+      background-color: #c94;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFCC9944', endColorstr='#FFAA6622');
+      zoom: 1; }
+    .ym-button.ym-warning:focus,
+    .ym-form button.ym-warning:focus,
+    .ym-form input[type="button"].ym-warning:focus,
+    .ym-form input[type="reset"].ym-warning:focus,
+    .ym-form input[type="submit"].ym-warning:focus {
+      outline: 0;
+      background: #da4; }
 
   /* Button color scheme: danger */
   .ym-button.ym-danger,
@@ -441,56 +392,52 @@
   .ym-form input[type="submit"].ym-danger {
     -webkit-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bb6666), color-stop(100%, #994444));
-    background-image: -webkit-linear-gradient(top, #bb6666, #994444);
-    background-image: -moz-linear-gradient(top, #bb6666, #994444);
-    background-image: -ms-linear-gradient(top, #bb6666, #994444);
-    background-image: linear-gradient(to bottom, #bb6666,#994444);
-    background-color: #bb6666;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b66), color-stop(100%, #944));
+    background-image: -webkit-linear-gradient(top, #b66, #944);
+    background-image: -moz-linear-gradient(top, #b66, #944);
+    background-image: -ms-linear-gradient(top, #b66, #944);
+    background-image: linear-gradient(to bottom, #b66,#944);
+    background-color: #b66;
     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFBB6666', endColorstr='#FF994444');
     zoom: 1;
     border: 1px solid #700;
     color: #fff !important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-  }
-  .ym-button.ym-danger:hover,
-  .ym-form button.ym-danger:hover,
-  .ym-form input[type="button"].ym-danger:hover,
-  .ym-form input[type="reset"].ym-danger:hover,
-  .ym-form input[type="submit"].ym-danger:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc6666), color-stop(100%, #aa5555));
-    background-image: -webkit-linear-gradient(top, #cc6666, #aa5555);
-    background-image: -moz-linear-gradient(top, #cc6666, #aa5555);
-    background-image: -ms-linear-gradient(top, #cc6666, #aa5555);
-    background-image: linear-gradient(to bottom, #cc6666,#aa5555);
-    background-color: #cc6666;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFCC6666', endColorstr='#FFAA5555');
-    zoom: 1;
-  }
-  .ym-button.ym-danger:active,
-  .ym-form button.ym-danger:active,
-  .ym-form input[type="button"].ym-danger:active,
-  .ym-form input[type="reset"].ym-danger:active,
-  .ym-form input[type="submit"].ym-danger:active {
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aa5555), color-stop(100%, #884444));
-    background-image: -webkit-linear-gradient(top, #aa5555, #884444);
-    background-image: -moz-linear-gradient(top, #aa5555, #884444);
-    background-image: -ms-linear-gradient(top, #aa5555, #884444);
-    background-image: linear-gradient(to bottom, #aa5555,#884444);
-    background-color: #aa5555;
-    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFAA5555', endColorstr='#FF884444');
-    zoom: 1;
-  }
-  .ym-button.ym-danger:focus,
-  .ym-form button.ym-danger:focus,
-  .ym-form input[type="button"].ym-danger:focus,
-  .ym-form input[type="reset"].ym-danger:focus,
-  .ym-form input[type="submit"].ym-danger:focus {
-    outline: 0;
-    background: #c66;
-  }
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+    .ym-button.ym-danger:hover,
+    .ym-form button.ym-danger:hover,
+    .ym-form input[type="button"].ym-danger:hover,
+    .ym-form input[type="reset"].ym-danger:hover,
+    .ym-form input[type="submit"].ym-danger:hover {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c66), color-stop(100%, #a55));
+      background-image: -webkit-linear-gradient(top, #c66, #a55);
+      background-image: -moz-linear-gradient(top, #c66, #a55);
+      background-image: -ms-linear-gradient(top, #c66, #a55);
+      background-image: linear-gradient(to bottom, #c66,#a55);
+      background-color: #c66;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFCC6666', endColorstr='#FFAA5555');
+      zoom: 1; }
+    .ym-button.ym-danger:active,
+    .ym-form button.ym-danger:active,
+    .ym-form input[type="button"].ym-danger:active,
+    .ym-form input[type="reset"].ym-danger:active,
+    .ym-form input[type="submit"].ym-danger:active {
+      -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a55), color-stop(100%, #844));
+      background-image: -webkit-linear-gradient(top, #a55, #844);
+      background-image: -moz-linear-gradient(top, #a55, #844);
+      background-image: -ms-linear-gradient(top, #a55, #844);
+      background-image: linear-gradient(to bottom, #a55,#844);
+      background-color: #a55;
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#FFAA5555', endColorstr='#FF884444');
+      zoom: 1; }
+    .ym-button.ym-danger:focus,
+    .ym-form button.ym-danger:focus,
+    .ym-form input[type="button"].ym-danger:focus,
+    .ym-form input[type="reset"].ym-danger:focus,
+    .ym-form input[type="submit"].ym-danger:focus {
+      outline: 0;
+      background: #c66; }
 
   /* pseudo elements don't work on input */
   .ym-form button:before,
@@ -506,77 +453,60 @@
     -webkit-box-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(255, 255, 255, 0.5);
     box-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(255, 255, 255, 0.5);
     border-radius: .15em 0 0 .15em;
-    pointer-events: none;
-  }
+    pointer-events: none; }
 
   .ym-add:before {
-    content: "\271A";
-  }
+    content: "\271A"; }
 
   .ym-delete:before {
-    content: "\2718";
-  }
+    content: "\2718"; }
 
   .ym-close:before {
-    content: "\2715";
-  }
+    content: "\2715"; }
 
   .ym-edit:before {
-    content: "\270E";
-  }
+    content: "\270E"; }
 
   .ym-email:before {
-    content: "\2709";
-  }
+    content: "\2709"; }
 
   .ym-like:before {
-    content: "\2764";
-  }
+    content: "\2764"; }
 
   .ym-next:before {
-    content: "\279C";
-  }
+    content: "\279C"; }
 
   .ym-play:before {
-    content: "\25B6";
-  }
+    content: "\25B6"; }
 
   .ym-reply:before {
-    content: "\27A5";
-  }
+    content: "\27A5"; }
 
   .ym-save:before {
-    content: "\2714";
-  }
+    content: "\2714"; }
 
   .ym-sign:before {
-    content: "\270D";
-  }
+    content: "\270D"; }
 
   .ym-spark:before {
-    content: "\2737";
-  }
+    content: "\2737"; }
 
   .ym-support:before {
-    content: "\2706";
-  }
+    content: "\2706"; }
 
   .ym-star:before {
-    content: "\2605";
-  }
+    content: "\2605"; }
 
   /* removes extra inner spacing in Firefox */
   .ym-form button::-moz-focus-inner {
     border: 0;
-    padding: 0;
-  }
+    padding: 0; }
 
   /* If line-height can't be modified, then fix Firefox spacing with padding */
   .ym-form input[type=button]::-moz-focus-inner,
   .ym-form input[type=reset]::-moz-focus-inner,
   .ym-form input[type=submit]::-moz-focus-inner {
-    padding: .4em;
-  }
+    padding: .4em; }
 
   /* The disabled styles */
   .ym-form button[disabled],
@@ -596,8 +526,7 @@
     text-shadow: none;
     position: static;
     -webkit-box-shadow: none;
-    box-shadow: none;
-  }
+    box-shadow: none; }
 
   /* ie6 support styles - redefined buttons, because of missing support for attribute selectors */
   * html .ym-button,
@@ -614,25 +543,21 @@
     padding: 0 1.5em;
     overflow: visible;
     /* removes extra side spacing in IE */
-    text-decoration: none !important;
-  }
+    text-decoration: none !important; }
   * html .ym-form button:focus,
   * html .ym-button:focus {
     outline: 0;
-    background: #fafafa;
-  }
+    background: #fafafa; }
   * html .ym-form button:hover,
   * html .ym-button:hover {
     background-color: #ddd;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
-  }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd'); }
   * html .ym-form button:active,
   * html .ym-button:active {
     background-color: #bbb;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#cccccc', EndColorStr='#bbbbbb');
     position: relative;
-    top: 1px;
-  }
+    top: 1px; }
   * html .ym-button.ym-disabled,
   * html .ym-button.ym-disabled:hover {
     background: #eee;
@@ -640,37 +565,28 @@
     border-color: #aaa;
     cursor: default;
     text-shadow: none;
-    position: static;
-  }
+    position: static; }
   * html .ym-button {
     /* Button size-scaling classes */
     /* 21px */
     /* 18px */
     /* 12px */
-    /* 10px */
-  }
-  * html .ym-button.ym-primary {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#8888ee', EndColorStr='#6666cc');
-  }
-  * html .ym-button.ym-success {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#66bb66', EndColorStr='#449944');
-  }
-  * html .ym-button.ym-warning {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ddaa44', EndColorStr='#BB7722');
-  }
-  * html .ym-button.ym-danger {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bb6666', EndColorStr='#994444');
-  }
-  * html .ym-button.ym-xlarge {
-    font-size: 1.5em;
-  }
-  * html .ym-button.ym-large {
-    font-size: 1.2857em;
-  }
-  * html .ym-button.ym-small {
-    font-size: 0.8571em;
-  }
-  * html .ym-button.ym-xsmall {
-    font-size: 0.7143em;
-  }
-}
+    /* 10px */ }
+    * html .ym-button.ym-primary {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#8888ee', EndColorStr='#6666cc'); }
+    * html .ym-button.ym-success {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#66bb66', EndColorStr='#449944'); }
+    * html .ym-button.ym-warning {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ddaa44', EndColorStr='#BB7722'); }
+    * html .ym-button.ym-danger {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bb6666', EndColorStr='#994444'); }
+    * html .ym-button.ym-xlarge {
+      font-size: 1.5em; }
+    * html .ym-button.ym-large {
+      font-size: 1.2857em; }
+    * html .ym-button.ym-small {
+      font-size: 0.8571em; }
+    * html .ym-button.ym-xsmall {
+      font-size: 0.7143em; } }
+
+/*# sourceMappingURL=gray-theme.css.map */
