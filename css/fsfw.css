@@ -139,3 +139,12 @@ ol.issue-messages ul {
 .ym-form .requires {
     margin-top: 0.5em;
 }
+
+h1 > a,
+h1 > a:focus,
+h1 > a:visited,
+h1 > a:active,
+h1 > a:hover {
+    background-color: transparent;
+    color: white;
+}

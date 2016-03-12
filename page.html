@@ -33,7 +33,7 @@ status_notdone string:1,2,3;
 ">
   <header>
     <div class="ym-wrapper"><div class="ym-wbox">
-        <h1><span tal:replace="config/TRACKER_NAME" /></h1>
+        <h1><a tal:attributes="href python:request.base"><span tal:replace="config/TRACKER_NAME" /></a></h1>
     </div></div>
   </header>
   <nav class="ym-hlist">
