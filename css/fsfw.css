@@ -135,3 +135,7 @@ ol.issue-messages ul {
     font-family: monospace;
     line-height: 1.5;
 }
+
+.ym-form .requires {
+    margin-top: 0.5em;
+}
