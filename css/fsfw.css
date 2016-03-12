@@ -130,3 +130,8 @@ ol.issue-messages ul {
 .pagination .download {
     float: left;
 }
+
+.issue textarea {
+    font-family: monospace;
+    line-height: 1.5;
+}
