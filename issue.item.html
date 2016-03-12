@@ -73,7 +73,7 @@
           <span tal:replace="structure python:context.assignedto.menu(html_kwargs={'id': 'assignedto'})" />
       </div></div>
       <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
-          <label for="keywords" i18n:translate="">Keywords <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword')" /></label>
+          <label for="keywords" i18n:translate="">Keywords <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword', label='select from all keywords')" /></label>
           <span tal:replace="structure python:context.keyword.field(id='keywords')" />
       </div></div>
     </div>
@@ -105,7 +105,7 @@
   <div class="ym-fbox">
     <div class="ym-fbox-wrap ym-grid">
       <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
-          <label for="nosy" i18n:translate="">Nosy list <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.user.classhelp('username,realname', property='nosy')" /></label>
+          <label for="nosy" i18n:translate="">Nosy list <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.user.classhelp('username,realname', property='nosy', label='(select from user list)')" /></label>
           <span tal:replace="structure python:context.nosy.field(id='nosy')" />
       </div></div>
       <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
