@@ -14,14 +14,15 @@
     <script type="text/javascript" src="@@file/help_controls.js"></script>
     <link rel="stylesheet" type="text/css" href="@@file/style.css" />
   </head>
-  <body onload="parent.submit.url='...'"
+  <body onload="parent.submit.url='...'; document.getElementById('fnord').submit();"
     tal:define="
 qs request/env/QUERY_STRING;
 qs python:'&'.join([a for a in qs.split('&') if not a.startswith('@template=')])"
 >
     <pre tal:content="request/env/QUERY_STRING" tal:condition=false />
     <form method="GET" name="itemSynopsis"
-      target="list"
+          target="list"
+          id="fnord"
       tal:attributes="action request/classname"
       tal:define="
       property request/form/property/value;
