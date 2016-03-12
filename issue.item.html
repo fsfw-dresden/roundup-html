@@ -73,7 +73,7 @@
           <span tal:replace="structure python:context.assignedto.menu(html_kwargs={'id': 'assignedto'})" />
       </div></div>
       <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
-          <label for="keywords" i18n:translate="">Keywords <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword', label='select from all keywords')" /></label>
+          <label for="keywords" i18n:translate="">Keywords <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword', label='(select from all keywords)')" /></label>
           <span tal:replace="structure python:context.keyword.field(id='keywords')" />
       </div></div>
     </div>
