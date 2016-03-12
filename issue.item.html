@@ -91,11 +91,14 @@
       </div></div>
       <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
           <div class="ym-label" i18n:translate="">Required for</div>
-          <ul tal:define="sups python:db.issue.filter(filterspec=dict(superseder=context.id))" tal:condition="sups">
-            <li tal:repeat="sup sups">
-              <a tal:attributes="href string:issue${sup/id}" tal:content="string:${sup/id} - ${sup/title}" />
-            </li>
-          </ul>
+          <tal:block tal:define="sups python:db.issue.filter(filterspec=dict(superseder=context.id))">
+            <ul tal:condition="sups">
+              <li tal:repeat="sup sups">
+                <a tal:attributes="href string:issue${sup/id}" tal:content="string:${sup/id} - ${sup/title}" />
+              </li>
+            </ul>
+            <div tal:condition="not:sups">nothing else</div>
+          </tal:block>
       </div></div>
     </div>
   </div>
