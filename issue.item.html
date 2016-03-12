@@ -23,134 +23,128 @@
   replace="context/id" i18n:name="id" /> Editing</span>
 </tal:block>
 
-<td class="content" metal:fill-slot="content">
+<div class="content" metal:fill-slot="content">
 
-<p tal:condition="python:not (context.is_view_ok()
- or request.user.hasRole('Anonymous'))" i18n:translate="">
- You are not allowed to view this page.</p>
+<p tal:condition="python:not (context.is_view_ok() or request.user.hasRole('Anonymous'))" i18n:translate="" class="box error">
+  You are not allowed to view this page.
+</p>
 
-<p tal:condition="python:not context.is_view_ok()
- and request.user.hasRole('Anonymous')" i18n:translate="">
- Please login with your username and password.</p>
+<p tal:condition="python:not context.is_view_ok() and request.user.hasRole('Anonymous')" i18n:translate="" class="box error">
+  Please login with your username and password.
+</p>
 
 <div tal:condition="context/is_view_ok">
 
 <form method="POST" name="itemSynopsis"
       onSubmit="return submit_once()" enctype="multipart/form-data"
-      tal:attributes="action context/designator">
-
-<table class="form">
-<tr>
- <th class="required" i18n:translate="">Title</th>
- <td colspan=3 tal:content="structure python:context.title.field(size=60)">title</td>
-</tr>
-
-<tr>
- <th class="required" i18n:translate="">Priority</th>
- <td tal:content="structure context/priority/menu">priority</td>
- <th i18n:translate="">Status</th>
- <td tal:content="structure context/status/menu">status</td>
-</tr>
-
-<tr>
- <th i18n:translate="">Due Date</th>
- <td tal:content="structure python:context.due_date.field(format='%Y-%m-%d')" />
- <th i18n:translate="">Revives</th>
- <td tal:content="structure python:context.revives.field(format='%Y-%m-%d')" />
-</tr>
-
-
-<tr>
- <th i18n:translate="">Assigned To</th>
- <td tal:content="structure context/assignedto/menu" />
- <th i18n:translate="">Keywords</th>
- <td>
-  <span tal:replace="structure context/keyword/field" />
-  <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword')" />
- </td>
-</tr>
-
-<tr>
- <th i18n:translate="">Requires</th>
- <td>
-  <span tal:replace="structure python:context.superseder.field(showid=1, size=20)" />
-  <span tal:condition="context/is_edit_ok"
-        tal:replace="structure python:db.issue.classhelp('id,title', property='superseder',
-        filter='status=waiting,in progress,needs attention;keyword='+context.keyword.plain())"/>
-
-   <tal:block tal:condition="context/superseder">
-   <br/>
-   <table>
-     <tr tal:repeat="sup context/superseder">
-       <td><a tal:attributes="href string:issue${sup/id}"
-         tal:content="string:${sup/id} - ${sup/title}"/>
-       </td>
-     </tr>
-   </table>
-   </tal:block>
- </td>
-
- <th>Required for</th>
- <td>
-   <table tal:define="sups python:db.issue.filter(filterspec=dict(superseder=context.id))"
-     tal:condition="sups">
-     <tr tal:repeat="sup sups">
-       <td><a tal:attributes="href string:issue${sup/id}"
-         tal:content="string:${sup/id} - ${sup/title}"/>
-       </td>
-     </tr>
-   </table>
- </td>
-</tr>
-
-<tr>
-  <th i18n:translate="">Nosy</th>
-  <td>
-    <span tal:replace="structure context/nosy/field" />
-    <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.user.classhelp('username,realname', property='nosy')" />
-  </td>
-  <th i18n:translate="">Public</th>
-  <td>
-    <span tal:replace="structure context/public/field" />
-  </td>
-</tr>
-
-<tr tal:condition="context/is_edit_ok">
- <th i18n:translate="" class="multi">Change Note</th>
- <td colspan=3>
-  <textarea tal:content="request/form/@note/value | default"
-            name="@note" wrap="hard" rows="15" cols="90"></textarea>
- </td>
-</tr>
-
-<tr tal:condition="context/is_edit_ok">
- <th i18n:translate="">File</th>
- <td colspan=3><input type="file" name="@file" size="60"></td>
-</tr>
-
-<tr tal:condition="context/is_edit_ok">
- <td>
-  &nbsp;
-  <input type="hidden" name="@template" value="item">
-  <input type="hidden" name="@required" value="title,priority">
- </td>
- <td colspan=3>
-  <span tal:replace="structure context/submit">submit button</span>
- </td>
-</tr>
-
-</table>
+      tal:attributes="action context/designator" class="ym-form">
+  <div class="ym-fbox">
+    <label for="title" i18n:translate="">Title <sup class="ym-required">*</sup></label>
+    <span tal:replace="structure python:context.title.field(id='title', required='required')"/>
+  </div>
+  <div class="ym-fbox">
+    <div class="ym-fbox-wrap ym-grid">
+      <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
+          <label for="priority" i18n:translate="">Priority <sup class="ym-required">*</sup></label>
+          <span tal:replace="structure python:context.priority.menu(html_kwargs={'id': 'priority', 'required': 'required'})" />
+      </div></div>
+      <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
+          <label for="status" i18n:translate="">Status <sup class="ym-required">*</sup></label>
+          <span tal:replace="structure python:context.status.menu(html_kwargs={'id': 'status', 'required': 'required'})" />
+      </div></div>
+    </div>
+  </div>
+  <div class="ym-fbox">
+    <div class="ym-fbox-wrap ym-grid">
+      <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
+          <label for="due_date" i18n:translate="">Due Date</label>
+          <span tal:replace="structure python:context.due_date.field(format='%Y-%m-%d', id='due_date')" />
+      </div></div>
+      <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
+          <label for="revives" i18n:translate="">Revives</label>
+          <span tal:replace="structure python:context.revives.field(format='%Y-%m-%d', id='revives')" />
+      </div></div>
+    </div>
+  </div>
+  <div class="ym-fbox">
+    <div class="ym-fbox-wrap ym-grid">
+      <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
+          <label for="assignedto" i18n:translate="">Assigned To</label>
+          <span tal:replace="structure python:context.assignedto.menu(html_kwargs={'id': 'assignedto'})" />
+      </div></div>
+      <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
+          <label for="keywords" i18n:translate="">Keywords</label>
+          <span tal:replace="structure python:context.keyword.field(id='keywords')" />
+          <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword')" />
+      </div></div>
+    </div>
+  </div>
+  <div class="ym-fbox">
+    <div class="ym-fbox-wrap ym-grid">
+      <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
+          <label for="superseder" i18n:translate="">Requires</label>
+          <span tal:replace="structure python:context.superseder.field(showid=1, id='superseder')" />
+          <ul tal:condition="context/superseder">
+            <li tal:repeat="sup context/superseder">
+              <a tal:attributes="href string:issue${sup/id}" tal:content="string:${sup/id} - ${sup/title}" />
+            </li>
+          </ul>
+      </div></div>
+      <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
+          <div class="ym-label" i18n:translate="">Required for</div>
+          <ul tal:define="sups python:db.issue.filter(filterspec=dict(superseder=context.id))" tal:condition="sups">
+            <li tal:repeat="sup sups">
+              <a tal:attributes="href string:issue${sup/id}" tal:content="string:${sup/id} - ${sup/title}" />
+            </li>
+          </ul>
+      </div></div>
+    </div>
+  </div>
+  <div class="ym-fbox">
+    <div class="ym-fbox-wrap ym-grid">
+      <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
+          <label for="nosy" i18n:translate="">Nosy list</label>
+          <span tal:replace="structure python:context.nosy.field(id='nosy')" />
+      </div></div>
+      <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
+          <div class="ym-label" i18n:translate="">Public</div>
+          <div class="ym-fbox-wrap ym-grid" tal:condition="context/is_edit_ok">
+            <div class="ym-g25 ym-gl"><div class="ym-gbox-left ym-fbox-check">
+                <input tal:condition="python:context.public._value" type="radio" value="yes" name="public" id="public-yes" checked="checked"/>
+                <input tal:condition="python:(not context.public._value)" type="radio" value="yes" name="public" id="public-yes" />
+                <label for="public-yes" i18n:translate="">yes</label>
+            </div></div>
+            <div class="ym-g25 ym-gl"><div class="ym-gbox ym-fbox-check">
+              <input tal:condition="python:(not context.public._value)" type="radio" value="no" name="public" id="public-no" checked="checked"/>
+              <input tal:condition="python:context.public._value" type="radio" value="no" name="public" id="public-no" />
+              <label for="public-no" i18n:translate="">no</label>
+            </div></div>
+          </div>
+          <div tal:condition="not:context/is_edit_ok" tal:content="python:context.public.plain()" />
+      </div></div>
+    </div>
+  </div>
+  <div class="ym-fbox" tal:condition="context/is_edit_ok">
+    <label for="note" i18n:translate="">Change note</label>
+    <textarea tal:content="request/form/@note/value | default" name="@note" wrap="hard" cols="72" rows="15" id="note"/>
+  </div>
+  <div class="ym-fbox" tal:condition="context/is_edit_ok">
+    <label for="file" i18n:translate="">Attach file</label>
+    <input type="file" size="60" id="file" name="@file" />
+  </div>
+  <div class="ym-fbox-footer ym-fbox-button" tal:condition="context/is_edit_ok">
+    <input type="hidden" name="@template" value="item">
+    <input type="hidden" name="@required" value="title,priority">
+    <input type="hidden" name="@action" value="new">
+    <button type="submit" class="ym-primary ym-save ym-button" tal:condition="context/id">Update</button>
+    <button type="submit" class="ym-success ym-save ym-button" tal:condition="not:context/id">Submit new issue</button>
+    <button type="reset" class="ym-warning ym-cancel ym-button">Discard all changes</button>
+  </div>
 </form>
 
-<tal:block tal:condition="not:context/id" i18n:translate="">
-<table class="form">
-<tr>
- <td>Note:&nbsp;</td>
- <th class="required">highlighted</th>
- <td>&nbsp;fields are required.</td>
-</tr>
-</table>
-</tal:block>
+<div tal:condition="not:context/id" i18n:translate="" class="box ">
+  <strong>Note:</strong> Fields marked with <sup class="ym-required">*</sup> are required.
+</div>
 
 <p tal:condition="context/id" i18n:translate="">
  Created on <b><tal:x replace="context/creation" i18n:name="creation" /></b>
@@ -159,45 +153,33 @@
  by <b><tal:x replace="context/actor" i18n:name="actor" /></b>.
 </p>
 
-<table class="messages" tal:condition="context/messages">
- <tr><th colspan="4" class="header" i18n:translate="">Messages</th></tr>
- <!-- Use context/messages/reverse for reverse ordering -->
- <tal:block tal:repeat="msg context/messages">
-  <tr>
-   <th><a tal:attributes="href string:msg${msg/id}"
-    i18n:translate="">msg<tal:x replace="msg/id" i18n:name="id" /> (view)</a></th>
-   <th i18n:translate="">Author: <tal:x replace="msg/author"
-       i18n:name="author" /></th>
-   <th i18n:translate="">Date: <tal:x replace="msg/date"
-       i18n:name="date" /></th>
-   <th>
-     <form style="padding:0" method="POST" tal:condition="context/is_edit_ok"
-           tal:attributes="action string:issue${context/id}">
-       <input type="hidden" name="@remove@messages" tal:attributes="value msg/id">
-     <input type="hidden" name="@action" value="edit">
-     <input type="submit" value="remove" i18n:attributes="value">
-    </form>
-   </th>
-  </tr>
-  <tr>
-   <td colspan="4" class="content">
-     <pre tal:content="structure msg/content/hyperlinked">content</pre>
+<tal:block tal:condition="context/messages">
+  <h3>Discussion</h3>
+  <ol class="issue-messages">
+    <li tal:repeat="msg context/messages" class="issue-message">
+      <h5><a tal:attributes="href string:msg${msg/id}" i18n:translate="">msg<tal:x replace="msg/id" i18n:name="id" /> (view)</a></h5>
+      <div class="issue-message-meta">
+        <dl class="issue-message-meta" i18n:translate="">
+          <dt>Author</dt>
+          <dd><tal:x replace="msg/author" i18n:name="author" /></dd>
+          <dt>Date</dt>
+          <dd><tal:x replace="msg/date" i18n:name="date" /></dd>
+        </dl>
+      </div>
+      <pre tal:content="structure msg/content/hyperlinked" />
+      <tal:block tal:condition="msg/files">
+        <h6>Attachments</h6>
+        <ul>
+          <li tal:repeat="file msg/files">
+            <a tal:attributes="href file/download_url" tal:content="file/name" />
+          </li>
+        </ul>
+      </tal:block>
+      <div class="issue-message-align-meta" />
+    </li>
+  </ol>
+</tal:block>
 
-     <tal:block tal:condition="msg/files">
-       <h5>Attachments</h5>
-       <ul>
-         <tal:block tal:repeat="file msg/files">
-           <li>
-             <a tal:attributes="href file/download_url"
-                tal:content="file/name">dld link</a>
-           </li>
-         </tal:block>
-       </ul>
-     </tal:block>
-   </td>
-  </tr>
- </tal:block>
-</table>
 
 <!-- Uncomment the following to list all files without
      their messages -->
@@ -241,7 +223,7 @@
 
 </div>
 
-</td>
+</div>
 
 </tal:block>
 <!-- SHA: a242ab3ed5c6969916f3c42f80d487710f165fb8 -->
