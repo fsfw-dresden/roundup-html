@@ -37,19 +37,19 @@ status_notdone string:1,2,3;
     </div></div>
   </header>
   <nav class="ym-hlist">
-    <div class="searchbox">
-      <form method="GET" action="issue">
-        <input type="hidden" name="@columns"
-	       tal:attributes="value columns_showall"
-	       value="id,activity,title,creator,assignedto,status"/>
-        <input type="hidden" name="@sort" value="-activity"/>
-        <input type="hidden" name="@group" value="priority"/>
-        <input id="search-text" name="@search_text" size="10"
-               tal:attributes="value request/search_text | default" />
-        <input type="submit" id="submit" name="submit" value="Search"
-               i18n:attributes="value" />
-      </form>
-    </div>
+    <form method="GET" action="issue" class="ym-searchform">
+      <input type="hidden" name="@columns"
+	     tal:attributes="value columns_showall"
+	     value="id,activity,title,creator,assignedto,status"/>
+      <input type="hidden" name="@sort" value="-activity"/>
+      <input type="hidden" name="@group" value="priority"/>
+      <input id="search-text" name="@search_text" size="10"
+             tal:attributes="value request/search_text | default"
+             class="ym-searchfield"/>
+      <input type="submit" id="submit" name="submit" value="Search"
+             i18n:attributes="value"
+             class="ym-searchbutton" />
+    </form>
   </nav>
   <div class="ym-column">
     <div class="ym-col1"><div class="ym-cbox">
