@@ -42,7 +42,7 @@ status_notdone string:1,2,3;
         <input type="hidden" name="@columns"
 	       tal:attributes="value columns_showall"
 	       value="id,activity,title,creator,assignedto,status"/>
-        <input type="hidden" name="@sort" value="activity"/>
+        <input type="hidden" name="@sort" value="-activity"/>
         <input type="hidden" name="@group" value="priority"/>
         <input id="search-text" name="@search_text" size="10"
                tal:attributes="value request/search_text | default" />
@@ -73,7 +73,7 @@ status_notdone string:1,2,3;
             <li>
               <a href="#"
                  tal:attributes="href python:request.indexargs_url('issue', {
-                                 '@sort': 'activity',
+                                 '@sort': '-activity',
                                  '@group': 'priority',
                                  '@filter': 'status,nosy',
                                  '@columns': 'id,activity,title,creator,status,assignedto',
