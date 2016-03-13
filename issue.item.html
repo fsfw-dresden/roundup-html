@@ -83,7 +83,7 @@
           <span tal:replace="structure python:context.assignedto.menu(html_kwargs={'id': 'assignedto'})" />
       </div></div>
       <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
-          <label for="keywords" i18n:translate="">Keywords <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword', label='(select from all keywords)', height='600', width='800')" /></label>
+          <label for="keywords" i18n:translate="">Keywords <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.keyword.classhelp(property='keyword', label='(select from all keywords)', height='1600', width='800')" /></label>
           <span tal:replace="structure python:context.keyword.field(id='keywords')" />
       </div></div>
     </div>
@@ -91,7 +91,7 @@
   <div class="ym-fbox">
     <div class="ym-fbox-wrap ym-grid">
       <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
-          <label for="superseder" i18n:translate="">Requires <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.issue.classhelp('id,title', property='superseder', filter='status=1,2,3', label='(select from open issues)', height='600', width='800')" /></label>
+          <label for="superseder" i18n:translate="">Requires <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.issue.classhelp('id,title', property='superseder', filter='status=1,2,3', label='(select from open issues)', height='1600', width='800')" /></label>
           <span tal:replace="structure python:context.superseder.field(showid=1, id='superseder')" />
           <ul tal:condition="context/superseder" class="requires">
             <li tal:repeat="sup context/superseder">
@@ -115,7 +115,7 @@
   <div class="ym-fbox">
     <div class="ym-fbox-wrap ym-grid">
       <div class="ym-g50 ym-gl"><div class="ym-gbox-left ym-fbox-text">
-          <label for="nosy" i18n:translate="">Nosy list <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.user.classhelp('username,realname', property='nosy', label='(select from user list)', height='600', width='800')" /></label>
+          <label for="nosy" i18n:translate="">Nosy list <span tal:condition="context/is_edit_ok" tal:replace="structure python:db.user.classhelp('username,realname', property='nosy', label='(select from user list)', height='1600', width='800')" /></label>
           <span tal:replace="structure python:context.nosy.field(id='nosy')" />
       </div></div>
       <div class="ym-g50 ym-gr"><div class="ym-gbox-right ym-fbox-text">
