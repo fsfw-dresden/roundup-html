@@ -7,10 +7,32 @@ body > header {
     box-shadow: 0 -1px 3px -1px #ccc inset;
 }
 
-body > nav.ym-hlist {
+.ym-hlist {
     background: white none repeat scroll 0 0;
-    box-shadow: 0 0 3px #ccc;
     margin-bottom: 1.5em;
+}
+
+.ym-hlist ul li a {
+    color: #222;
+}
+
+.ym-hlist ul li a:focus,
+.ym-hlist ul li a:hover,
+.ym-hlist ul li a:active {
+    background: rgba(0, 0, 0, 0.25) none repeat scroll 0 0;
+    color: black;
+}
+
+.ym-hlist .ym-htitle {
+    display: block;
+    float: left;
+    padding: 0.5em 1.5em;
+    margin: 0;
+    line-height: 2em;
+}
+
+body > .ym-hlist {
+    box-shadow: 0 0 3px #ccc;
 }
 
 .ym-searchform .ym-searchbutton {
@@ -107,6 +129,10 @@ ol.issue-messages > li:last-child {
 
 ol.issue-messages > li:nth-child(2n) {
     background-color: #f8f8f8;
+}
+
+ol.issue-messages > li.issue-message:target {
+    background-color: rgba(107, 187, 0, 0.2);
 }
 
 dl.issue-message-meta {

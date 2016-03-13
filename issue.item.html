@@ -23,17 +23,27 @@
   replace="context/id" i18n:name="id" /> Editing</span>
 </tal:block>
 
+<tal:block metal:fill-slot="skiplinks">
+  <li tal:condition="python:context.is_view_ok() and context.messages"><a class="ym-skip" tal:attributes="href python:'#issue-msg{}'.format(next(iter(context.messages.reverse())).id)">Skip to latest discussion message (Press Enter)</a></li>
+</tal:block>
 <div class="content" metal:fill-slot="content">
 
 <p tal:condition="python:not (context.is_view_ok() or request.user.hasRole('Anonymous'))" i18n:translate="" class="box error">
   You are not allowed to view this page.
 </p>
 
-<p tal:condition="python:not context.is_view_ok() and request.user.hasRole('Anonymous')" i18n:translate="" class="box error">
+<p tal:condition="python:not context.is_view_ok() and request.user.hasRole('Anonymous')" i18n:translate="" class="box note">
   Please login with your username and password.
 </p>
 
 <div tal:condition="context/is_view_ok">
+
+  <nav class="ym-hlist issue-nav">
+    <h6 class="ym-htitle">Quick links</h6>
+    <ul>
+      <li><a tal:attributes="href python:'#issue-msg{}'.format(next(iter(context.messages.reverse())).id)">Latest discussion</a></li>
+    </ul>
+  </nav>
 
 <form method="POST" name="itemSynopsis"
       onSubmit="return submit_once()" enctype="multipart/form-data"
@@ -158,7 +168,7 @@
 <tal:block tal:condition="context/messages">
   <h3>Discussion</h3>
   <ol class="issue-messages">
-    <li tal:repeat="msg context/messages" class="issue-message">
+    <li tal:repeat="msg context/messages" class="issue-message" tal:attributes="id python:'issue-msg{}'.format(msg.id)">
       <h5><a tal:attributes="href string:msg${msg/id}" i18n:translate="">msg<tal:x replace="msg/id" i18n:name="id" /> (view)</a></h5>
       <div class="issue-message-meta">
         <dl class="issue-message-meta" i18n:translate="">
@@ -166,6 +176,8 @@
           <dd><tal:x replace="msg/author" i18n:name="author" /></dd>
           <dt>Date</dt>
           <dd><tal:x replace="msg/date" i18n:name="date" /></dd>
+          <dt>Link</dt>
+          <dd><a tal:attributes="href string:#issue-msg${msg/id}">msg<tal:x replace="msg/id" i18n:name="id"/> in this discussion</a></dd>
         </dl>
       </div>
       <pre tal:content="structure msg/content/hyperlinked" />
