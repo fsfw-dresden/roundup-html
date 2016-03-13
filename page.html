@@ -31,6 +31,11 @@ columns_showall string:id,activity,due_date,revives,title,status;
 status_notresolved string:-1,1,2,3,4,5,6,7;
 status_notdone string:1,2,3;
 ">
+  <ul class="ym-skiplinks">
+    <li><a class="ym-skip" href="#nav">Skip to navigation (Press Enter)</a></li>
+    <li><a class="ym-skip" href="#main">Skip to main content (Press Enter)</a></li>
+    <span metal:define-slot="skiplinks" tal:omit-tag=""/>
+  </ul>
   <header>
     <div class="ym-wrapper"><div class="ym-wbox">
         <h1><a tal:attributes="href python:request.base"><span tal:replace="config/TRACKER_NAME" /></a></h1>
@@ -62,11 +67,11 @@ status_notdone string:1,2,3;
           <a class="form-small" tal:attributes="href request/current_url"
              i18n:translate="">clear this message</a>
         </div>
-        <h2><span metal:define-slot="body_title">foobar</span></h2>
+        <h2 id="main"><span metal:define-slot="body_title">foobar</span></h2>
         <td class="content" metal:define-slot="content">Page content goes here</td>
     </div></div>
     <div class="ym-col3"><div class="ym-cbox">
-        <h2 i18n:translate="">Navigation</h2>
+        <h2 i18n:translate="" id="nav">Navigation</h2>
         <nav class="ym-vlist" tal:condition="python:request.user.username != 'anonymous'">
           <h6 class="ym-vtitle" i18n:translate="">Hello, <span i18n:name="user" tal:replace="python:request.user.username.plain(escape=1)">username</span></h6>
           <ul>
