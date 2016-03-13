@@ -41,7 +41,7 @@
   <nav class="ym-hlist issue-nav">
     <h6 class="ym-htitle">Quick links</h6>
     <ul>
-      <li><a tal:attributes="href python:'#issue-msg{}'.format(next(iter(context.messages.reverse())).id)">Latest discussion</a></li>
+      <li tal:condition="python:context.messages"><a tal:attributes="href python:'#issue-msg{}'.format(next(iter(context.messages.reverse())).id)">Latest discussion</a></li>
     </ul>
   </nav>
 
