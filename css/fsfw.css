@@ -275,3 +275,50 @@ pre {
     margin: 0;
   }
 }
+
+.ym-form input[type="submit"].ym-primary,
+.ym-form input[type="reset"].ym-primary,
+.ym-form input[type="button"].ym-primary,
+.ym-form button.ym-primary,
+.ym-button.ym-primary {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #79d400), color-stop(100%, #66b300));
+    background-image: -webkit-linear-gradient(top, #79d400, #66b300);
+    background-image: -moz-linear-gradient(top, #79d400, #66b300);
+    background-image: -ms-linear-gradient(top, #79d400, #66b300);
+    background-image: linear-gradient(to bottom, #79d400,#66b300);
+    background-color: #6BBB00;
+}
+
+.ym-form input[type="submit"].ym-primary:hover,
+.ym-form input[type="reset"].ym-primary:hover,
+.ym-form input[type="button"].ym-primary:hover,
+.ym-form button.ym-primary:hover,
+.ym-button.ym-primary:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #83e600), color-stop(100%, #70c400));
+    background-image: -webkit-linear-gradient(top, #83e600, #70c400);
+    background-image: -moz-linear-gradient(top, #83e600, #70c400);
+    background-image: -ms-linear-gradient(top, #83e600, #70c400);
+    background-image: linear-gradient(to bottom, #83e600,#70c400);
+    background-color: #75cc00;
+}
+
+.ym-form input[type="submit"].ym-primary:active,
+.ym-form input[type="reset"].ym-primary:active,
+.ym-form input[type="button"].ym-primary:active,
+.ym-form button.ym-primary:active,
+.ym-button.ym-primary:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66b300), color-stop(100%, #61ab00));
+    background-image: -webkit-linear-gradient(top, #66b300, #61ab00);
+    background-image: -moz-linear-gradient(top, #66b300, #61ab00);
+    background-image: -ms-linear-gradient(top, #66b300, #61ab00);
+    background-image: linear-gradient(to bottom, #66b300,#61ab00);
+    background-color: #75cc00;
+}
+
+.ym-form input[type="submit"].ym-primary:focus,
+.ym-form input[type="reset"].ym-primary:focus,
+.ym-form input[type="button"].ym-primary:focus,
+.ym-form button.ym-primary:focus,
+.ym-button.ym-primary:focus {
+    background: #6BBB00;
+}
