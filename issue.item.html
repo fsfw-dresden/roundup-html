@@ -47,7 +47,7 @@
 
 <form method="POST" name="itemSynopsis"
       onSubmit="return submit_once()" enctype="multipart/form-data"
-      tal:attributes="action context/designator" class="ym-form issue">
+      tal:attributes="action context/designator" class="ym-form issue linearize-form">
   <div class="ym-fbox">
     <label for="title" i18n:translate="">Title <sup class="ym-required">*</sup></label>
     <span tal:replace="structure python:context.title.field(id='title', required='required')"/>

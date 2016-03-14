@@ -201,3 +201,77 @@ h1 > a:hover {
 pre {
     color: black;
 }
+
+@media screen and ( max-width: 1280px ) {
+    .linearize-form input,
+    .linearize-form textarea,
+    .linearize-form select {
+        width: 100%;
+    }
+    .linearize-form .ym-fbox-wrap {
+        width: 100%;
+    }
+
+}
+
+/* optimize forms on small screens by forcing display mode: full */
+@media screen and ( max-width: 740px )  {
+
+  /* linearize form elements */
+  .linearize-form label {
+    float: none;
+  }
+
+  .linearize-form .ym-label,
+  .linearize-form .ym-message,
+  .linearize-form input,
+  .linearize-form button,
+  .linearize-form textarea,
+  .linearize-form select {
+    display: block;
+    float: none;
+    position: static;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* linearize grids */
+  .linearize-form .ym-fbox-wrap,
+  .linearize-form .ym-fbox-wrap [class*="ym-g"] {
+    display: block;
+    float: none;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* restore special form elements */
+  .linearize-form input[type="checkbox"],
+  .linearize-form input[type="radio"],
+  .linearize-form input[type="image"] {
+    margin-left: 0 !important;
+    width: auto !important;
+    display: inline;
+  }
+}
+
+@media screen and ( max-width: 760px )  {
+
+  /* linearization for column module */
+  .linearize-level-1,
+  .linearize-level-1 > [class*="ym-col"] {
+    display: block;
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: 100% !important;
+    position: static;
+  }
+
+  /* reset defined gutter values */
+  .linearize-level-1 > [class*="ym-col"] > [class*="ym-cbox"] {
+    overflow: hidden; /* optional for containing floats */
+    padding: 0;
+    margin: 0;
+  }
+}
