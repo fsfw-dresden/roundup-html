@@ -198,6 +198,13 @@ status_notdone string:1,2,3;
           </ul>
         </nav>
 
+        <nav class="ym-vlist">
+          <h6 class="ym-vtitle" i18n:translate="">Documentation</h6>
+          <ul>
+            <li><a href="https://wiki.fsfw-dresden.de/doku.php/orga/interne-infrastruktur/aufgabenverwaltung-benutzeranleitung">Tracker Manual</a></li>
+          </ul>
+        </nav>
+
         <form method="POST" tal:attributes="action request/base" class="ym-form" tal:condition="python:request.user.username == 'anonymous'">
           <h6 i18n:translate="" class="ym-fbox-heading">Login</h6>
           <input type="hidden" name="@action" value="Login">
